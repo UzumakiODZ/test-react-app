@@ -1,0 +1,169 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Modern font */
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Stylish gradient background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  padding: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px;
+  background: #fff;
+  color: #333;
+  border-radius: 12px; /* Modern rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px;
+  width: 100%;
+  max-width: 400px; /* Responsive max width */
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+input:focus {
+  border-color: #ff7e5f; /* Accent color on focus */
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff7e5f; /* Button background color */
+  color: #fff; /* Button text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #feb47b; /* Hover effect */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto; /* Center grid */
+}
+
+.news-card {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.news-card:hover {
+  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.news-card img {
+  width: 100%;
+  height: 180px; /* Adjusted height */
+  object-fit: cover; /* Ensure the image covers the area */
+  border-radius: 12px;
+}
+
+.news-card h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.news-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff7e5f;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.pagination button:hover {
+  background-color: #feb47b;
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .news-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-card {
+    width: 90%;
+    max-width: 100%; /* Allow card to take full width on smaller screens */
+  }
+
+  .pagination {
+    flex-direction: column; /* Stack pagination buttons on smaller screens */
+  }
+
+  .pagination button {
+    margin: 5px 0; /* Adjust margin for stacked buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .news-card h3 {
+    font-size: 18px;
+  }
+
+  .news-card p {
+    font-size: 14px;
+  }
+
+  input, button {
+    font-size: 14px; /* Slightly smaller font size on very small screens */
+  }
+}
